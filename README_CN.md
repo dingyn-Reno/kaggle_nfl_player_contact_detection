@@ -3,9 +3,12 @@
 > The solution of the 87th, bronze medal, top 10%.
 
 代码链接：https://github.com/dingyn-Reno/kaggle_nfl_player_contact_detection
+
 数据链接：https://www.kaggle.com/datasets/dyn201885095/testdata/download?datasetVersionNumber=24
+
 提交代码：https://www.kaggle.com/code/yefawu/nfl-3in1?scriptVersionId=120272348
-英文页面：
+
+英文页面：https://github.com/dingyn-Reno/kaggle_nfl_player_contact_detection
 
 ## 运行项目
 ```bash
