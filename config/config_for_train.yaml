@@ -1,0 +1,47 @@
+work_dir: ./work_dir/nfl4
+#weights: ./weights/resnet50_fold0.pt
+
+# feeder
+feeder: feeder.nfl_for_train.Feeder
+train_feeder_args:
+  debug: 0
+  df_path: './train_filtered.pkl'
+  fc_path: './train_featurecol.pkl'
+  vf_path: './train_video2frames.pkl'
+  vh_path: './train_video2helmets.pkl'
+  fm_path: './frames'
+  mode: 'train'
+
+optimizer: 'Adam'
+
+test_feeder_args:
+  debug: 0
+  df_path: './train_filtered.pkl'
+  fc_path: './train_featurecol.pkl'
+  vf_path: './train_video2frames.pkl'
+  vh_path: './train_video2helmets.pkl'
+  fm_path: './frames'
+  mode: 'test'
+
+# model
+model: model.inception.Model
+model_args:
+  bm: resnet50
+
+#training
+device: [0,1]
+batch_size: 8
+test_batch_size: 100
+
+#optim
+base_lr: 0.001
+step: [10]
+num_epoch: 10
+lr_decay_rate: 0.1
+warm_up_epoch: 1
+save_epoch: 0
+weight_decay: 0.000001
+momentum: 0
+seed: 42
+grad_norm: True
+clip: 1000
